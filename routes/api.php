@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CharacterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+$no_symbol_or_whitespace = '[^*|\":<>[\]{}`\\()\';@&$|\s]';
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get(
+    '/character/{characterName}/{realm}/{region}', 
+    [CharacterController::class, 'lookup'
+])
+->where([
+    'characterName' => $no_symbol_or_whitespace . '{2,12}', 
+    'realm' => $no_symbol_or_whitespace . '+', 
+    'region' => $no_symbol_or_whitespace . '+'
+]);

@@ -1,8 +1,13 @@
-// Fonts
+@charset 'utf-8';
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
 @import 'variables';
+@import './main';
+@import './character-info';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #fff;
+        background: #000;
+    }
+}
+
