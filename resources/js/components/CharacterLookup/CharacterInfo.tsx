@@ -1,11 +1,9 @@
 import * as React from "react";
-import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import { CharacterDataType } from "resources/js/data/wow";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
 import Stack from "@mui/material/Stack";
-import Paper from "@mui/material/Paper";
 
 export const CharacterInfo = ( props: {
     characterData: CharacterDataType | null
@@ -60,7 +58,9 @@ export const CharacterInfo = ( props: {
                             className="character-info__gear"
                             key={`character-info__gear--${i}`}>
                             <a href={`https://www.wowhead.com/item=${gear.id}`}>
-                                <img src={`https://assets.rpglogs.com/img/warcraft/abilities/${gear.icon}`} />
+                                <img 
+                                    className="character-info__gear-icon"
+                                    src={`https://assets.rpglogs.com/img/warcraft/abilities/${gear.icon}`} />
                             </a>
                             <Typography 
                                 variant="subtitle1" 

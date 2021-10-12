@@ -7,9 +7,6 @@ import {
     characterLookupReducerActionType,
     CharacterLookupAPIResponseType
 } from "../../data/wow";
-import {
-    mopremeCharacterInfo
-} from "../../data/placeholderData";
 
 import { SearchBar } from "./SearchBar";
 import { CharacterInfo } from "./CharacterInfo";
@@ -18,9 +15,9 @@ import Container from "@mui/material/Container";
 const characterLookupReducerinitialState: characterLookupReducerStateType = {
     characterName: "",
     realm: "",
-    region: RegionOptions[1],
+    region: null,
     regionInputValue: "",
-    characterData: mopremeCharacterInfo,
+    characterData: null,
     loading: false,
     error: ""
 }

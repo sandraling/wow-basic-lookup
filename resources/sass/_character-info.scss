@@ -4,37 +4,45 @@
         height: 40px;
     }
 
-    &__gear-name {
-        &--poor {
-            color: $poor;
+    &__gear {
+        &-name {
+            &--poor {
+                color: $poor;
+            }
+    
+            &--common {
+                color: $common;
+            }
+    
+            &--uncommon {
+                color: $uncommon;
+            }
+    
+            &--rare {
+                color: $rare;
+            }
+    
+            &--epic {
+                color: $epic;
+            }
+    
+            &--legendary {
+                color: $legendary;
+            }
+    
+            &--artifact {
+                color: $artifact;
+            }
+    
+            &--heirloom {
+                color: $heirloom;
+            }
         }
 
-        &--common {
-            color: $common;
-        }
-
-        &--uncommon {
-            color: $uncommon;
-        }
-
-        &--rare {
-            color: $rare;
-        }
-
-        &--epic {
-            color: $epic;
-        }
-
-        &--legendary {
-            color: $legendary;
-        }
-
-        &--artifact {
-            color: $artifact;
-        }
-
-        &--heirloom {
-            color: $heirloom;
+        &-icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 1em;
         }
     }
 }
